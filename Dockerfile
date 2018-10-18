@@ -1,4 +1,4 @@
-FROM golang:1.10-alpine
+FROM golang:1.10-alpine AS build
 
 RUN apk add --update git
 
@@ -9,6 +9,10 @@ RUN go get -d github.com/hetznercloud/hcloud-go/hcloud
 COPY . .
 
 RUN go get -d -v ./...
-RUN go install -v ./...
+RUN go build -v ./...
 
-CMD ["app"]
+FROM alpine
+WORKDIR /app
+COPY --from=build /go/src/app/app /app
+
+CMD [ "./app" ]
