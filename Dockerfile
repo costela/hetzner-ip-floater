@@ -11,7 +11,11 @@ COPY . .
 RUN go get -d -v ./...
 RUN go build -v ./...
 
+
 FROM alpine
+
+RUN apk add --no-cache ca-certificates
+
 WORKDIR /app
 COPY --from=build /go/src/app/app /app
 
