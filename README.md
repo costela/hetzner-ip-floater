@@ -1,3 +1,6 @@
+![Docker Automated build](https://img.shields.io/docker/automated/costela/hetzner-ip-floater.svg)
+![Docker Build Status](https://img.shields.io/docker/build/costela/hetzner-ip-floater.svg)
+
 # hetzner-ip-floater
 
 Minimalistic floating IP setter for container clusters (currently tested on docker swarm) running on [Hetzner Cloud](https://www.hetzner.com/cloud).
