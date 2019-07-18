@@ -1,5 +1,6 @@
 ![Docker Automated build](https://img.shields.io/docker/automated/costela/hetzner-ip-floater.svg)
 ![Docker Build Status](https://img.shields.io/docker/build/costela/hetzner-ip-floater.svg)
+![Image Info](https://images.microbadger.com/badges/image/costela/hetzner-ip-floater.svg)
 
 # hetzner-ip-floater
 
