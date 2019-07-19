@@ -1,22 +1,18 @@
-FROM golang:1.10-alpine AS build
+FROM golang:1.12-alpine AS build
 
 RUN apk add --update git
 
-WORKDIR /go/src/app
-
-RUN go get -d github.com/hetznercloud/hcloud-go/hcloud
+WORKDIR /app
 
 COPY . .
 
-RUN go get -d -v ./...
-RUN go build -v ./...
+RUN go build
 
 
 FROM alpine
 
 RUN apk add --no-cache ca-certificates
 
-WORKDIR /app
-COPY --from=build /go/src/app/app /app
+COPY --from=build /app/hetzner-ip-floater /
 
-CMD [ "./app" ]
+CMD [ "/hetzner-ip-floater" ]
