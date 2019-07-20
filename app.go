@@ -38,7 +38,7 @@ func main() {
 		if err != nil {
 			log.Fatalf("could not get floating IP %d: %s", floatingIPID, err)
 		}
-		if fip.Server.ID == targetServer.ID {
+		if fip.Server != nil && fip.Server.ID == targetServer.ID {
 			log.Printf("already set to %s", targetServer.Name)
 		} else {
 			log.Printf("updating to %s", targetServer.Name)
