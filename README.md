@@ -2,6 +2,8 @@
 ![Docker Build Status](https://img.shields.io/docker/build/costela/hetzner-ip-floater.svg)
 ![Image Info](https://images.microbadger.com/badges/image/costela/hetzner-ip-floater.svg)
 
+# ⚠ Deprecated in favor of [hcloud-ip-floater](/costela/hcloud-ip-floater)
+
 # hetzner-ip-floater
 
 Minimalistic floating IP setter for container clusters (currently tested on docker swarm) running on [Hetzner Cloud](https://www.hetzner.com/cloud).
