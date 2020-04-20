@@ -2,7 +2,7 @@
 ![Docker Build Status](https://img.shields.io/docker/build/costela/hetzner-ip-floater.svg)
 ![Image Info](https://images.microbadger.com/badges/image/costela/hetzner-ip-floater.svg)
 
-# ⚠ Deprecated in favor of [hcloud-ip-floater](/costela/hcloud-ip-floater)
+# ⚠ This project is unmaintained, but has a "spiritual successor" in [hcloud-ip-floater](/costela/hcloud-ip-floater)
 
 # hetzner-ip-floater
 
